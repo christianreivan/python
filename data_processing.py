@@ -24,7 +24,7 @@ for i in range(1, N+1):
             c = True
         else :
             print ("sesuaikan syarat!")
-            break
+            continue
     else :
         print ("data tidak valid!")
         break
