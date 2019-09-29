@@ -12,16 +12,11 @@ Contoh : 5 buah entri data dengan masing-masing = 1 , 150 , 300 , 15 , -5
 
 N = int(input ("jumlah entry :"))
 k = []
-sum = 0
-c = False
 for i in range(1, N+1):
     a = int (input ("masukkan data :"))
     if a != -999 :
         if 100 < a < 200 :
             k.append(a)
-            sum += a
-            k.sort()
-            c = True
         else :
             print ("sesuaikan syarat!")
             continue
@@ -29,9 +24,7 @@ for i in range(1, N+1):
         print ("data tidak valid!")
         break
 
-if c == True :
-        average = float (sum / N )
-        print ("rata2 nya :" , average)
-        print (k)
-        print ("Data terbesar :" , k[N-1])
-        print ("Data terkecil :" , k[0])
+print (k)
+print ("rata2 nya :" , sum(k)/float(len(k)))
+print ("Data terbesar :" , max(k))
+print ("Data terkecil :" , min(k))
